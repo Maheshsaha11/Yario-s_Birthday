@@ -1,0 +1,697 @@
+/* ==========================
+   GOOGLE FONT RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+
+    background:linear-gradient(
+        -45deg,
+        #ff9a9e,
+        #fad0c4,
+        #fad0ff,
+        #a18cd1
+    );
+
+    background-size:400% 400%;
+    animation:bgMove 15s ease infinite;
+
+    color:white;
+}
+
+
+/* ==========================
+   ANIMATED BACKGROUND
+========================== */
+
+@keyframes bgMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+
+.background{
+
+position:fixed;
+width:100%;
+height:100%;
+
+left:0;
+top:0;
+
+z-index:-2;
+
+backdrop-filter:blur(10px);
+
+}
+
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+flex-direction:column;
+
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+.small-title{
+
+font-size:22px;
+
+opacity:.9;
+
+margin-bottom:15px;
+
+}
+
+.name{
+
+font-size:90px;
+
+font-family:'Dancing Script',cursive;
+
+text-shadow:
+
+0 0 10px white,
+0 0 25px hotpink;
+
+margin-bottom:20px;
+
+}
+
+.subtitle{
+
+font-size:20px;
+
+max-width:700px;
+
+line-height:1.8;
+
+margin-bottom:40px;
+
+}
+
+#startBtn{
+
+padding:18px 45px;
+
+font-size:20px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+background:white;
+
+color:#ff4f91;
+
+font-weight:bold;
+
+transition:.35s;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.25);
+
+}
+
+#startBtn:hover{
+
+transform:scale(1.08);
+
+}
+
+
+/* ==========================
+   MAIN CONTENT
+========================== */
+
+.hidden{
+display:none;
+}
+
+.section{
+
+width:90%;
+max-width:1000px;
+
+margin:80px auto;
+
+padding:50px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+box-shadow:
+
+0 15px 40px rgba(0,0,0,.15);
+
+animation:fadeUp 1s;
+
+}
+
+.section h2{
+
+font-size:42px;
+
+text-align:center;
+
+margin-bottom:30px;
+
+font-family:'Dancing Script';
+
+}
+
+.section p{
+
+font-size:18px;
+
+line-height:1.9;
+
+text-align:center;
+
+}
+
+
+/* ==========================
+   GALLERY
+========================== */
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+margin-top:30px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+height:270px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+cursor:pointer;
+
+transition:.4s;
+
+border:6px solid white;
+
+box-shadow:
+
+0 15px 30px rgba(0,0,0,.2);
+
+}
+
+.gallery img:hover{
+
+transform:
+
+rotate(-2deg)
+scale(1.05);
+
+}
+
+
+/* ==========================
+SECRET MESSAGE BOX
+========================== */
+
+.secret-card{
+
+background:white;
+
+color:#444;
+
+padding:25px;
+
+border-radius:20px;
+
+margin:20px auto;
+
+max-width:700px;
+
+text-align:center;
+
+}
+
+.secret-card button{
+
+margin-top:20px;
+
+padding:12px 30px;
+
+border:none;
+
+background:#ff5d9e;
+
+color:white;
+
+border-radius:30px;
+
+cursor:pointer;
+
+font-size:16px;
+
+}
+
+
+/* ==========================
+SCRAPBOOK
+========================== */
+
+.scrap-page{
+
+background:#fff8e8;
+
+color:#444;
+
+padding:35px;
+
+border-radius:20px;
+
+margin:25px 0;
+
+transform:rotate(-1deg);
+
+box-shadow:
+
+0 10px 20px rgba(0,0,0,.2);
+
+}
+
+.scrap-page h3{
+
+margin-bottom:15px;
+
+font-size:28px;
+
+font-family:'Dancing Script';
+
+}
+
+
+/* ==========================
+100 REASONS
+========================== */
+
+#reasons{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:18px;
+
+}
+
+.reason{
+
+background:white;
+
+color:#444;
+
+padding:20px;
+
+border-radius:15px;
+
+transition:.3s;
+
+}
+
+.reason:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+/* ==========================
+ENDING
+========================== */
+
+.ending{
+
+text-align:center;
+
+}
+
+.ending h1{
+
+margin-top:20px;
+
+font-size:70px;
+
+font-family:'Dancing Script';
+
+}
+
+
+/* ==========================
+FLOATING HEARTS
+========================== */
+
+.heart{
+
+position:fixed;
+
+bottom:-20px;
+
+font-size:24px;
+
+animation:floatUp linear forwards;
+
+pointer-events:none;
+
+}
+
+@keyframes floatUp{
+
+0%{
+
+transform:
+translateY(0)
+scale(.5);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(-120vh)
+scale(1.8);
+
+opacity:0;
+
+}
+
+}
+
+
+/* ==========================
+FADE UP
+========================== */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.name{
+
+font-size:60px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+}
+
+.section{
+
+padding:30px;
+
+}
+
+.section h2{
+
+font-size:34px;
+
+}
+
+.ending h1{
+
+font-size:50px;
+
+}
+
+}
+/* ==========================
+LIGHTBOX
+========================== */
+
+.lightbox{
+
+position:fixed;
+
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.9);
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+z-index:999;
+
+animation:fadeUp .4s;
+
+}
+
+.lightbox.hidden{
+
+display:none;
+
+}
+
+.lightbox img{
+
+max-width:90%;
+max-height:85%;
+
+border-radius:20px;
+
+box-shadow:
+0 0 40px white;
+
+}
+
+#closeLightbox{
+
+position:absolute;
+
+top:30px;
+right:50px;
+
+font-size:60px;
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+#closeLightbox:hover{
+
+transform:scale(1.2);
+
+color:pink;
+
+}
+/* ==========================
+GIFT BOX
+========================== */
+
+#giftBox{
+
+width:180px;
+height:180px;
+
+position:relative;
+
+cursor:pointer;
+
+margin-top:40px;
+
+transition:.5s;
+
+animation:bounceGift 2s infinite;
+
+}
+
+.box{
+
+position:absolute;
+
+bottom:0;
+
+width:180px;
+height:120px;
+
+background:#ff6aa2;
+
+border-radius:10px;
+
+}
+
+.lid{
+
+position:absolute;
+
+top:25px;
+
+width:190px;
+height:40px;
+
+left:-5px;
+
+background:#ff4b90;
+
+border-radius:8px;
+
+transition:.8s;
+
+transform-origin:left bottom;
+
+}
+
+.ribbon-v{
+
+position:absolute;
+
+width:24px;
+height:180px;
+
+left:78px;
+
+background:white;
+
+}
+
+.ribbon-h{
+
+position:absolute;
+
+width:180px;
+height:24px;
+
+top:72px;
+
+background:white;
+
+}
+
+.gift-text{
+
+margin-top:30px;
+
+font-size:22px;
+
+}
+
+.open .lid{
+
+transform:
+
+rotate(-40deg)
+translateY(-40px);
+
+}
+
+.open{
+
+transform:
+
+scale(1.1);
+
+}
+
+@keyframes bounceGift{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
